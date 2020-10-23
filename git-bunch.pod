@@ -1,0 +1,114 @@
+=pod
+
+=for comment
+Because I like POD.
+Easy to write,
+Easy to read,
+Easy to convert.
+
+=head1 NAME
+
+git-bunch - manage bunch directories which contain git repositories
+
+=head1 SYNOPSIS
+
+  git-bunch -h | --help
+  git-bunch -l | --list
+  git-bunch NAME
+  git-bunch NAME ls
+  git-bunch NAME config -l | --list
+  git-bunch NAME config config-name [config-value]
+  git-bunch NAME [--] COMMAND [OPTIONS]
+
+=head1 DESCRIPTION
+
+git-bunch or bunch is a term to refer to a directory which is supposed to be a container for other directories being containers of git repositories.
+
+If you keep your repos under some directory...
+
+If you need to execute (sometimes, not so often) some particular git commands over these repos...
+
+... this script for you!
+
+=head1 CONFIGURE BUNCHES
+
+The script assumes that all bunches and their settings are stored globally in the C<~/.gitconfig> file.
+
+You can declare more than one bunch. Each directory containing git repositories can be called a bunch. Each bunch has a name, path and options. The name is used to refer the bunch. The path is used to locate the bunch. Options are used to tune the bunch. There is no restriction to declare more than one name per a bunch. In this case both names are synonyms, but they could have different options.
+
+=head1 CONFIGURATIN FILE
+
+Git bunch is per-user configuration only. That means that all bunches are configured via user's C<~/.gitconfig>. The syntax is B<almost> the same as for C<gitconfig>.
+
+=head2 Syntax
+
+In this example two bunches called "one" and "two" are created and setup to particular directories:
+
+  [bunch "one"]
+    path = /var/git/bunch-1
+    errexit = no
+  [bunch "two"]
+    path = /var/git/bunch-2
+    errexit = no
+
+=head2 Values
+
+=over 4
+
+=item pathname
+
+A pathname follows Bash syntax.
+
+=item boolean
+
+The following words stand for B<true> and B<false>:
+
+=over 4
+
+=item true
+
+Boolean true literals are C<yes>, C<on>, C<true>, C<1>.
+
+B<In contrast to git itself>, the single name (without C<= value>) is treated as false. 
+
+=item false
+
+Boolean false literals are C<no>, C<off>, C<false>, C<0> and the emtpy string.
+
+=back
+
+=back
+
+=head2 Variables
+
+The following variables are supported for bunches:
+
+=over 4
+
+=item C<path> (string)
+
+The only mandatory variable defining the bunch location.
+
+=item C<errexit> (boolean)
+
+True means stop immediately if a command exits with a non-zero status. Defaults to false (i.e., C<set +o errexit>).
+
+=back
+
+=head1 SEE ALSO
+
+Something similar...
+
+=over 4
+
+=item https://metacpan.org/pod/Git::Bunch
+
+Something very similar, implemented in pure Perl
+
+=back
+
+=head1 COPYRIGHT
+
+Copyright (c) 2020 Ildar Shaimordanov. MIT License.
+
+=cut

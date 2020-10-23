@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+
+trap 'rm -f pod2*.tmp' EXIT
+
+echo '### Check POD'
+
+podchecker git-bunch.pod
+
+echo '### Create README.md'
+
+pod2html git-bunch.pod --no-index --verbose --quiet \
+| pandoc -f html -t gfm \
+| dos2unix \
+> README.md
+
+echo '### Create man'
+
+pod2man git-bunch.pod --center="Git Manual" --release="GIT-BUNCH(1)" \
+> git-bunch.1
+
+echo '### Create usage and help'
+
+export usage="$( pod2usage -verbose 1 git-bunch.pod )"
+export help="$( pod2usage -verbose 2 git-bunch.pod )"
+
+echo '### Generate the tool'
+
+< git-bunch.bash \
+> git-bunch \
+perl -pe 's/^<(usage|help)>$/$ENV{$1}/'

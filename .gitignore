@@ -1,0 +1,5 @@
+# pod2html dirty
+pod2*.tmp
+
+# test scripts etc...
+z.*
