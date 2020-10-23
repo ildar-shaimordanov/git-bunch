@@ -17,7 +17,8 @@ git-bunch - manage bunch directories which contain git repositories
   git-bunch NAME
   git-bunch NAME ls
   git-bunch NAME config -l | --list
-  git-bunch NAME config config-name [config-value]
+  git-bunch NAME config name value
+  git-bunch NAME config --unset name
   git-bunch NAME [--] COMMAND [OPTIONS]
 
 =head1 DESCRIPTION
