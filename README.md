@@ -39,7 +39,7 @@ the bunch. Options are used to tune the bunch. There is no restriction
 to declare more than one name per a bunch. In this case both names are
 synonyms, but they could have different options.
 
-# CONFIGURATIN FILE
+# CONFIGURATION FILE
 
 Git bunch is per-user configuration only. That means that all bunches
 are configured via user's `~/.gitconfig`. The syntax is **almost** the
