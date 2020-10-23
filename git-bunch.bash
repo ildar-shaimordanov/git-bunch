@@ -93,7 +93,6 @@ bunch_exec() {
 			case "$v" in
 			0 | no  | off | false | ''	) BUNCH_ERREXIT="+o" ;;
 			1 | yes | on  | true		) BUNCH_ERREXIT="-o" ;;
-#			*	) die "Illegal value for boolean errexit: $v" ;;
 			esac
 			;;
 		esac
