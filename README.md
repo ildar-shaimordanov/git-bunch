@@ -101,7 +101,11 @@ The following variables are supported for bunches:
 Something similar...
 
   - https://metacpan.org/pod/Git::Bunch  
-    Something very similar, implemented in pure Perl
+    Something very similar, implemented in pure Perl.
+
+  - https://github.com/salewski/ads-github-tools  
+    That sounds promising: *The project providing command line tools for
+    managing a large number of GitHub repositories...*.
 
 # COPYRIGHT
 

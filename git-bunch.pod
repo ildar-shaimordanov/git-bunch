@@ -115,7 +115,11 @@ Something similar...
 
 =item https://metacpan.org/pod/Git::Bunch
 
-Something very similar, implemented in pure Perl
+Something very similar, implemented in pure Perl.
+
+=item https://github.com/salewski/ads-github-tools
+
+That sounds promising: I<The project providing command line tools for managing a large number of GitHub repositories...>.
 
 =back
 
