@@ -46,10 +46,10 @@ In this example two bunches called "one" and "two" are created and setup to part
 
   [bunch "one"]
     path = /var/git/bunch-1
-    errexit = no
+    stoponerror = no
   [bunch "two"]
     path = /var/git/bunch-2
-    errexit = no
+    stoponerror = no
 
 =head2 Values
 
@@ -89,7 +89,7 @@ The following variables are supported for bunches:
 
 The only mandatory variable defining the bunch location.
 
-=item C<errexit> (boolean)
+=item C<stoponerror> (boolean)
 
 True means stop immediately if a command exits with a non-zero status. Defaults to false (i.e., C<set +o errexit>).
 

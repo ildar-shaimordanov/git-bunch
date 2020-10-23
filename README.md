@@ -53,10 +53,10 @@ to particular directories:
 ``` 
   [bunch "one"]
     path = /var/git/bunch-1
-    errexit = no
+    stoponerror = no
   [bunch "two"]
     path = /var/git/bunch-2
-    errexit = no
+    stoponerror = no
 ```
 
 ## Values
@@ -84,7 +84,7 @@ The following variables are supported for bunches:
   - `path` (string)  
     The only mandatory variable defining the bunch location.
 
-  - `errexit` (boolean)  
+  - `stoponerror` (boolean)  
     True means stop immediately if a command exits with a non-zero
     status. Defaults to false (i.e., `set +o errexit`).
 

@@ -175,10 +175,10 @@ In this example two bunches called \*(L"one\*(R" and \*(L"two\*(R" are created a
 .Vb 6
 \&  [bunch "one"]
 \&    path = /var/git/bunch\-1
-\&    errexit = no
+\&    stoponerror = no
 \&  [bunch "two"]
 \&    path = /var/git/bunch\-2
-\&    errexit = no
+\&    stoponerror = no
 .Ve
 .SS "Values"
 .IX Subsection "Values"
@@ -207,9 +207,9 @@ The following variables are supported for bunches:
 .el .IP "\f(CWpath\fR (string)" 4
 .IX Item "path (string)"
 The only mandatory variable defining the bunch location.
-.ie n .IP """errexit"" (boolean)" 4
-.el .IP "\f(CWerrexit\fR (boolean)" 4
-.IX Item "errexit (boolean)"
+.ie n .IP """stoponerror"" (boolean)" 4
+.el .IP "\f(CWstoponerror\fR (boolean)" 4
+.IX Item "stoponerror (boolean)"
 True means stop immediately if a command exits with a non-zero status. Defaults to false (i.e., \f(CW\*(C`set +o errexit\*(C'\fR).
 .SH "SEE ALSO"
 .IX Header "SEE ALSO"
