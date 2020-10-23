@@ -88,6 +88,14 @@ The following variables are supported for bunches:
     True means stop immediately if a command exits with a non-zero
     status. Defaults to false (i.e., `set +o errexit`).
 
+# REQUIREMENTS
+
+  - `bash` 4.4+
+
+  - `sed`
+
+  - `ls`
+
 # SEE ALSO
 
 Something similar...

@@ -95,6 +95,18 @@ True means stop immediately if a command exits with a non-zero status. Defaults 
 
 =back
 
+=head1 REQUIREMENTS
+
+=over 4
+
+=item C<bash> 4.4+
+
+=item C<sed>
+
+=item C<ls>
+
+=back
+
 =head1 SEE ALSO
 
 Something similar...
